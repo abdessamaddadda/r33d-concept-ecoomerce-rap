@@ -1,0 +1,221 @@
+/* Fond noir global */
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar en noir */
+.navbar {
+  background-color: #000;
+  border-bottom: 2px solid #333;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-brand:hover {
+  color: #00c853; /* Couleur verte au survol */
+}
+
+.navbar .btn-outline-dark, .btn-outline-success {
+  border-radius: 20px;
+  color: #fff;
+  border-color: #fff;
+}
+
+.navbar .btn-outline-dark:hover, .navbar .btn-outline-success:hover {
+  background-color: #00c853;
+  color: #000;
+}
+
+/* Animation sur la carte des produits */
+.product-card {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #222;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Texte des titres de produits */
+.product-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 10px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Effet hover sur les produits */
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Catalogue des soldes */
+.catalogue-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  padding: 50px 20px;
+  background-color: #111;
+}
+
+.soldes-carousel {
+  position: relative;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.soldes-carousel img {
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  animation: fadeInOut 10s infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 20% {
+    opacity: 1;
+  }
+  25%, 100% {
+    opacity: 0;
+  }
+}
+/* Style général pour la dropdown */
+.dropdown {
+  display: flex;
+  justify-content: center; /* Centrer la dropdown */
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Animation de l'apparition du menu */
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Transition douce */
+  transform: translateY(-10px);
+}
+
+/* Apparition de la dropdown au survol */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+.logo-navbar {
+  height: 100px;
+  max-height: 95px;
+  object-fit: contain;
+}
+
+/* Style des éléments dans le dropdown */
+.dropdown-item {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #ffcc00; /* Couleur jaune au survol */
+  color: #fff; /* Texte blanc */
+}
+
+/* Titre des soldes */
+.soldes-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  color: #fff;
+}
+/* Style personnalisé pour le carrousel */
+.carousel-inner img {
+  height: 400px; /* Ajuste la hauteur de l'image */
+  object-fit: cover; /* Pour que l'image remplisse tout l'espace sans être déformée */
+}
+/* Style pour les cards des produits */
+.product-card {
+  background-color: black; /* Fond noir pour les cards */
+  color: white; /* Texte blanc */
+  border: 2px solid white; /* Bordure blanche */
+  padding: 20px; /* Un peu de padding autour du contenu */
+  margin: 10px; /* Un peu de marge pour espacer les cards */
+  text-align: center; /* Centrer le texte */
+  transition: all 0.3s ease; /* Transition douce pour l'animation */
+  border-radius: 10px; /* Bordures arrondies pour un effet plus moderne */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre pour un effet de profondeur */
+}
+
+/* Au survol de la card */
+.product-card:hover {
+  border-color: yellow; /* Bordure jaune au survol */
+  transform: translateY(-5px); /* Déplacer la card légèrement vers le haut */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Augmenter l'ombre pour un effet plus marqué */
+}
+
+/* Style pour l'image du produit */
+.product-card img {
+  width: 100%; /* Prendre toute la largeur de la card */
+  height: auto; /* Conserver le ratio de l'image */
+  border-radius: 5px; /* Bordure arrondie pour l'image */
+}
+
+/* Style pour le titre du produit */
+.product-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.navbar {
+  background-color: #000;
+}
+.badge {
+  font-size: 0.75rem;
+  padding: 0.35em 0.6em;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: #fff; /* Couleur des flèches */
+  border-radius: 50%; /* Forme ronde des flèches */
+}
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.form-control {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.form-control:focus {
+  background-color: #555;
+  color: #fff;
+  border-color: #ffc107;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+  border-color: #e0a800;
+}

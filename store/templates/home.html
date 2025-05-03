@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Nos produits</h2>
+
+<<div class="catalogue-grid">
+  {% for product in products %}
+    <div class="product-card" onclick="location.href='{% url 'collection_detail' product.collection.id %}'">
+      <img src="{{ product.image.url }}" alt="{{ product.name }}">
+      <div class="product-title">{{ product.name }}</div>
+    </div>
+  {% endfor %}
+</div>
+
+  {% endfor %}
+</div>
+{% endblock %}

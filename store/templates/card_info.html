@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Informations Carte{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1 class="text-center mb-4">Informations de la carte bancaire</h1>
+  <form method="POST">
+    {% csrf_token %}
+    
+    <div class="mb-3">
+      <label for="card_number" class="form-label">Numéro de la carte</label>
+      <input type="text" class="form-control" id="card_number" name="card_number" placeholder="1234 5678 9101 1121" required>
+    </div>
+    
+    <div class="mb-3">
+      <label for="expiry_date" class="form-label">Date d'expiration</label>
+      <input type="text" class="form-control" id="expiry_date" name="expiry_date" placeholder="MM/AA" required>
+    </div>
+    
+    <div class="mb-3">
+      <label for="cvv" class="form-label">CVV</label>
+      <input type="text" class="form-control" id="cvv" name="cvv" placeholder="123" required>
+    </div>
+    
+    <button type="submit" class="btn btn-warning w-100">Sauvegarder les informations de carte</button>
+  </form>
+</div>
+{% endblock %}
